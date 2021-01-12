@@ -23,6 +23,15 @@
    
     <body>
         <h1>Welcome to My Web Page</h1>
-        <h5>Under construction</h5>
+        <h5 id="clock"></h5>
     </body>
+    <script>
+        var clockId = document.getElementById("clock");
+        setInterval(myClock,1000);
+
+        function myClock(){
+            var time = new Date();
+            clockId.innerHTML = time.toLocaleTimeString();
+        }
+    </script>
 </html>
