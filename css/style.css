@@ -1,4 +1,8 @@
 .background{
     background-image: linear-gradient(to right,#3494e6,#ec6ead)
 }
-
+.my-img{
+    border-radius: 50%;
+    height: 80%;
+    width: 40%;
+}
