@@ -13,6 +13,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
   </script>
+  <script src="js/script.js"></script>
 </head>
 
 <body class="background">
@@ -52,7 +53,7 @@
 
 
 
-  <main class="overflow-auto pt-5 px-2">
+  <main class="overflow-auto pt-5 px-2 " id="mainBlock">
     <div class="container mt-2">
       <div class="row text-center ">
         <h1>My Work</h1>
@@ -82,6 +83,7 @@
             If there is no user than it will indicate at the receiver via transmission device that water is wasting at particular place. 
             So, we can control the water wastage and contribute towards society.
           </p>
+          <button type="button" class="btn btn-outline-info text-light" onclick="showNews()">News Article</button>
       </div>
     </div>
 
@@ -170,11 +172,13 @@
     </div>
   </footer>
 
+  
+      <!-- news article-->
+      <div class="bg-transparent fixed-top d-none mx-auto my-auto bg-dark overflow-auto p-2" id="newsBlock" onclick="closeNews()">
+        <img src="img/Lokmat_Samachar.jpg" alt="none" height="620px"  class=" fluid d-block mx-auto my-auto" onclick="closeNews()">
+    </div>
 
 
-  <script src="js/script.js">
-
-  </script>
 </body>
 
 </html>

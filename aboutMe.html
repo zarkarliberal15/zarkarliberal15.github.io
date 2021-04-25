@@ -105,7 +105,7 @@
 </main>
 
 
-  <footer class="sticky-bottom overflow-hidden mt-5">
+  <footer class="overflow-hidden mt-5" id="myFooter">
     <div class="fluid-container ">
       <div class="row text-center">
         <div class="col">
@@ -157,8 +157,20 @@
 
 
 
-  <script src="js/script.js">
+  <script>
+    window.addEventListener("resize", changeNavPosition);
+var myFooter =  document.getElementById('myFooter');
 
+function changeNavPosition(){
+    
+    if(screen.width>=576){
+        myFooter.classList.remove("sticky-bottom");
+        myFooter.classList.add("fixed-bottom");
+    }else if(screen.width<576){
+        myFooter.classList.remove("fixed-bottom");
+        myFooter.classList.add("sticky-bottom");
+    }
+}
   </script>
 </body>
 

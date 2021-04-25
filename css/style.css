@@ -30,5 +30,8 @@ nav:hover{
     background-color: black;
 }
 
+.background-blur{
+    filter: blur(10px);
+}
 
 
