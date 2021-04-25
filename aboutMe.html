@@ -15,7 +15,7 @@
   </script>
 </head>
 
-<body class="background">
+<body class="background" onload="changeNavPosition()">
 <header class="overflow-hidden">
   <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navBackground">
     <div class="container-fluid">
@@ -106,7 +106,7 @@
 
 
   <footer class="overflow-hidden mt-5" id="myFooter">
-    <div class="fluid-container ">
+    <div class="fluid-container">
       <div class="row text-center">
         <div class="col">
           <a href="mailto:zarkarliberal15@gmail.com"> <svg xmlns="http://www.w3.org/2000/svg"
@@ -156,17 +156,16 @@
   </footer>
 
 
-
+<script src="js/script.js"></script>
   <script>
     window.addEventListener("resize", changeNavPosition);
-var myFooter =  document.getElementById('myFooter');
-
-function changeNavPosition(){
     
+  function changeNavPosition(){
+  var myFooter =  document.getElementById('myFooter');
     if(screen.width>=576){
-        myFooter.classList.remove("sticky-bottom");
+      myFooter.classList.remove("sticky-bottom");
         myFooter.classList.add("fixed-bottom");
-    }else if(screen.width<576){
+    }else{
         myFooter.classList.remove("fixed-bottom");
         myFooter.classList.add("sticky-bottom");
     }
